@@ -1,0 +1,591 @@
+/* ============================================
+   TANISHKA JINDAL PORTFOLIO — RESPONSIVE CSS
+   Add this file AFTER your existing style.css:
+   <link rel="stylesheet" href="responsive.css">
+   ============================================ */
+
+/* ── CSS Custom Properties ────────────────── */
+:root {
+  --warm-bg: bisque;
+  --card-bg: rgb(252, 216, 163);
+  --header-bg: antiquewhite;
+  --about-bg: rgb(230, 229, 229);
+  --skills-bg: rgb(195, 209, 212);
+  --project-bg: rgb(221, 199, 172);
+  --contact-bg: #212121;
+  --radius: 10px;
+  --transition: 0.25s ease;
+}
+
+/* ── BASE RESET (applied globally) ──────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--warm-bg);
+  font-family: cursive, sans-serif;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ── HEADER & NAV ───────────────────────────── */
+header {
+  background-color: var(--header-bg);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+#p1 {
+  margin: 0;
+  padding: 0;
+  font-family: cursive;
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  font-weight: 900;
+}
+
+#ul1 {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  font-family: cursive;
+  font-size: clamp(0.8rem, 1.8vw, 1rem);
+  font-weight: bold;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+#ul1 li a {
+  text-decoration: none;
+  color: inherit;
+  transition: color var(--transition);
+  padding: 4px 6px;
+  border-radius: 5px;
+}
+
+#ul1 li a:hover {
+  background-color: var(--card-bg);
+}
+
+/* ── HOME SECTION ────────────────────────────── */
+.home {
+  background-color: var(--header-bg);
+  padding: 48px 24px 60px;
+}
+
+.c1 {
+  display: inline-block;
+  background-color: var(--card-bg);
+  font-family: cursive;
+  font-size: clamp(0.75rem, 2vw, 1rem);
+  font-weight: bold;
+  padding: 10px 16px;
+  border: 1px solid black;
+  border-radius: var(--radius);
+  margin-bottom: 20px;
+}
+
+#h2-1 {
+  font-size: clamp(2rem, 8vw, 4rem);
+  font-weight: 900;
+  font-family: cursive;
+  margin: 0 0 8px;
+  line-height: 1.1;
+}
+
+#p2 {
+  color: red;
+  font-size: inherit;
+}
+
+#p3 {
+  margin: 16px 0 28px;
+  max-width: 600px;
+  line-height: 1.7;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+button {
+  background-color: var(--card-bg);
+  color: black;
+  border: 1.5px solid black;
+  border-radius: 7px;
+  padding: 11px 22px;
+  margin-right: 12px;
+  margin-bottom: 12px;
+  font-family: cursive;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* ── ABOUT SECTION ───────────────────────────── */
+.about {
+  background-color: var(--about-bg);
+  padding: 48px 24px;
+}
+
+#p4 {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 6px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+#h1-1 {
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  margin-bottom: 20px;
+}
+
+#p5, #p6, #p7 {
+  margin: 0 0 16px;
+  max-width: 720px;
+  line-height: 1.8;
+  font-size: clamp(0.85rem, 2vw, 1rem);
+}
+
+/* Stats cards */
+.ul2 {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 24px 0 8px;
+}
+
+.ul2 li {
+  background-color: var(--card-bg);
+  border: 2px solid black;
+  border-radius: var(--radius);
+  padding: 16px 22px;
+  text-align: center;
+  font-family: cursive;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  font-weight: bold;
+  min-width: 130px;
+  flex: 1 1 130px;
+  max-width: 200px;
+  transition: transform var(--transition);
+}
+
+.ul2 li:hover {
+  transform: translateY(-4px);
+}
+
+/* ── EDUCATION SECTION ───────────────────────── */
+.education {
+  padding: 48px 24px;
+  background-color: var(--warm-bg);
+}
+
+#p8 {
+  font-size: 0.85rem;
+  color: #666;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+#h1-3 {
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  margin-bottom: 24px;
+}
+
+.card4 {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card4-1, .card4-2, .card4-3 {
+  background-color: rgb(213, 237, 237);
+  border: 1px solid #aaa;
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  transition: box-shadow var(--transition);
+}
+
+.card4-1:hover, .card4-2:hover, .card4-3:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+
+.card4-1 h3, .card4-2 h3, .card4-3 h3 {
+  font-size: clamp(0.95rem, 2.5vw, 1.15rem);
+  margin-bottom: 6px;
+}
+
+.card4-1 h4, .card4-2 h4, .card4-3 h4 {
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+.card4-1 h6, .card4-2 h6, .card4-3 h6 {
+  font-size: 0.82rem;
+  font-weight: normal;
+  color: #666;
+}
+
+/* ── SKILLS SECTION ──────────────────────────── */
+.skills {
+  background-color: var(--skills-bg);
+  padding: 48px 24px;
+}
+
+.skills p, .skills h1 {
+  margin-bottom: 6px;
+}
+
+.skills h1 {
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  margin-bottom: 24px;
+}
+
+.card5 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card5-1, .card5-2, .card5-3 {
+  background-color: antiquewhite;
+  border: 1px solid #aaa;
+  border-radius: var(--radius);
+  padding: 20px;
+  flex: 1 1 220px;
+}
+
+.skills1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--card-bg);
+  border: 1px solid black;
+  border-radius: var(--radius);
+  padding: 10px 16px;
+  font-family: cursive;
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+#ul3, #ul4, #ul5 {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+#ul3 li, #ul4 li, #ul5 li {
+  background-color: rgb(175, 185, 194);
+  border: 1px solid #666;
+  border-radius: var(--radius);
+  padding: 8px 14px;
+  font-family: cursive;
+  font-size: clamp(0.8rem, 1.8vw, 0.95rem);
+  font-weight: bold;
+  transition: transform var(--transition);
+}
+
+#ul3 li:hover, #ul4 li:hover, #ul5 li:hover {
+  transform: scale(1.05);
+}
+
+/* ── PROJECTS SECTION ────────────────────────── */
+.projects {
+  background-color: var(--project-bg);
+  padding: 48px 24px;
+}
+
+.projects .p9 {
+  font-size: 0.85rem;
+  color: #666;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.h1-5 {
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  margin-bottom: 24px;
+}
+
+.card6 {
+  background-color: azure;
+  border: 2px solid black;
+  border-radius: 18px;
+  padding: 28px;
+  max-width: 720px;
+}
+
+.ul6 {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  margin-bottom: 18px;
+}
+
+.ul6 li {
+  background-color: aliceblue;
+  border: 1px solid #aaa;
+  border-radius: 7px;
+  padding: 6px 14px;
+  font-family: cursive;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.h2-A {
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  margin-bottom: 14px;
+  text-align: left;
+  justify-content: flex-start;
+}
+
+.p10 {
+  line-height: 1.7;
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  margin-bottom: 14px;
+}
+
+.p11, .p12 {
+  margin: 6px 0;
+}
+
+.p11 a, .p12 a {
+  color: #0057a8;
+  text-decoration: underline;
+  font-size: 0.95rem;
+  transition: color var(--transition);
+}
+
+.p11 a:hover, .p12 a:hover {
+  color: #003f7f;
+}
+
+/* ── CONTACT SECTION ─────────────────────────── */
+.contact {
+  background-color: var(--contact-bg);
+  color: #fff;
+  padding: 56px 24px 40px;
+  text-align: center;
+}
+
+.p13 {
+  font-size: 0.85rem;
+  color: #aaa;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  display: block;
+  text-align: center;
+}
+
+.h1-B {
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  margin-bottom: 12px;
+  text-align: center;
+  justify-content: center;
+}
+
+.p14 {
+  color: #bbb;
+  margin-bottom: 28px;
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  display: block;
+  text-align: center;
+}
+
+.tocontact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 32px;
+}
+
+.tocontact1, .tocontact2, .tocontact3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 2px solid #fff;
+  border-radius: 12px;
+  color: whitesmoke;
+  background-color: rgb(67, 66, 66);
+  padding: 10px 18px;
+  font-size: clamp(0.8rem, 2vw, 0.95rem);
+  text-decoration: none;
+  transition: background-color var(--transition), transform var(--transition);
+}
+
+.tocontact1:hover, .tocontact2:hover, .tocontact3:hover {
+  background-color: #555;
+  transform: translateY(-3px);
+}
+
+.footer-note {
+  color: #888;
+  font-size: 0.82rem;
+  display: block;
+  text-align: center;
+  margin: 0;
+}
+
+/* ── RESPONSIVE BREAKPOINTS ──────────────────── */
+
+/* Large screens (1200px+): education cards in a row */
+@media (min-width: 1200px) {
+  .card4 {
+    flex-direction: row;
+  }
+
+  .card4-1, .card4-2, .card4-3 {
+    flex: 1;
+  }
+}
+
+/* Tablets (768px – 1024px) */
+@media (max-width: 1024px) {
+  .ul2 li {
+    flex: 1 1 120px;
+  }
+}
+
+/* Small tablets / large phones (600px – 767px) */
+@media (max-width: 767px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 14px 20px;
+  }
+
+  #ul1 {
+    gap: 12px;
+    justify-content: flex-start;
+    font-size: 0.85rem;
+  }
+
+  .home {
+    padding: 36px 20px 48px;
+  }
+
+  .card5 {
+    flex-direction: column;
+  }
+
+  .card5-1, .card5-2, .card5-3 {
+    flex: 1 1 100%;
+  }
+
+  .ul2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ul2 li {
+    max-width: 90%;
+    width: 100%;
+  }
+
+  .card6 {
+    padding: 20px;
+  }
+}
+
+/* Mobile phones (≤ 480px) */
+@media (max-width: 480px) {
+  nav {
+    padding: 12px 16px;
+  }
+
+  #ul1 {
+    gap: 8px;
+    font-size: 0.78rem;
+  }
+
+  .home {
+    padding: 28px 16px 40px;
+  }
+
+  .about, .education, .skills, .projects, .contact {
+    padding: 36px 16px;
+  }
+
+  #h2-1 {
+    font-size: 2.4rem;
+  }
+
+  button {
+    width: 100%;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .tocontact {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tocontact1, .tocontact2, .tocontact3 {
+    width: 100%;
+    justify-content: center;
+    max-width: 300px;
+  }
+
+  .card6 {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .h2-A {
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+/* Very small screens (≤ 360px) */
+@media (max-width: 360px) {
+  #ul1 {
+    font-size: 0.72rem;
+    gap: 6px;
+  }
+
+  #h2-1 {
+    font-size: 2rem;
+  }
+}
